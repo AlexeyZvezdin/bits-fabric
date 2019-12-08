@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/">Home</router-link>|
+      <router-link to="/">Главная</router-link>|
       <router-link to="/bag">Корзина</router-link>
     </div>
     <router-view />
@@ -10,12 +10,12 @@
 
 <style>
 @font-face {
-  font-family: "BebasNeue";
-  src: url("./assets/BebasNeue.ttf");
+  font-family: 'BebasNeue';
+  src: url('./assets/BebasNeue.ttf');
 }
 
 #app {
-  font-family: "BebasNeue", Helvetica, Arial, sans-serif;
+  font-family: 'BebasNeue', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
