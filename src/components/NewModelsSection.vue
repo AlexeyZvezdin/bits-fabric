@@ -7,20 +7,17 @@
         цветных и ярких моделей для всей семьи.
       </p>
       <new-models-gallery />
-      <ads-section />
     </div>
   </section>
 </template>
 
 <script>
 import NewModelsGallery from './NewModelsGallery';
-import AdsSection from './AdsSection';
 
 export default {
   name: 'newmodels',
   components: {
-    NewModelsGallery,
-    AdsSection
+    NewModelsGallery
   }
 };
 </script>
