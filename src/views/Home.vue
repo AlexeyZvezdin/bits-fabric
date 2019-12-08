@@ -1,17 +1,23 @@
 <template>
-  <div class="home">
-    <HelloWorld msg="Welcome to Your Vue.js App" />
-  </div>
+  <main class="main_home">
+    <JumboSection />
+  </main>
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue';
+import JumboSection from '@/components/JumboSection.vue';
 
 export default {
   name: 'home',
   components: {
-    HelloWorld
+    JumboSection
   }
 };
 </script>
+
+<style>
+main {
+  width: 960px;
+}
+</style>
