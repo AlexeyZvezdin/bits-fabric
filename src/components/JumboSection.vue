@@ -22,7 +22,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 /* read styles from bottom to top */
 
 .main__home__jumbo__box__item_info__desc span:last-child {
@@ -38,9 +38,17 @@ export default {
 
 .main__home__jumbo__box__item_info {
   position: absolute;
-  top: 250px;
+  top: 100px;
   right: 20px;
-  color: white;
+  color: black;
+  cursor: pointer;
+}
+
+.main__home__jumbo__box {
+  overflow: hidden;
+  position: relative;
+  max-height: 451px;
+  min-height: 451px;
 }
 
 .main__home__jumbo__box__desc {
@@ -60,15 +68,6 @@ export default {
   object-fit: cover;
   width: 100%;
   height: 450px;
-}
-
-.main__home__jumbo__box {
-  overflow: hidden;
-  position: relative;
-  max-height: 451px;
-  min-height: 451px;
-  object-fit: cover;
-  object-position: 50% 50%;
 }
 
 .main__home__jumbo {
