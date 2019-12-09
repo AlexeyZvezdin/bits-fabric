@@ -43,7 +43,7 @@
   margin: 0 auto;
   border-right: 1px solid lightgray;
   border-left: 1px solid lightgray;
-  height: 2000px;
+  height: 2400px;
 }
 </style>
 

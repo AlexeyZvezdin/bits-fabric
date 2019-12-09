@@ -28,10 +28,8 @@
       <div class="header_box__shopping_bag">
         <div class="header_box__shopping_bag__box">
           <img src="../assets/cart.png" alt="корзина покупок" />
-          <span>
-            {{$store.getters.fullBag}}
-            Корзина
-          </span>
+          <span v-if="$store.getters.getTrue">{{$store.getters.fullBag}}</span>
+          <span v-else>Корзина</span>
         </div>
       </div>
     </div>

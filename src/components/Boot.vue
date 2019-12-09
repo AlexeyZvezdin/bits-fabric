@@ -1,7 +1,13 @@
 <template>
-  <div class="new_models_gallery__box__item">
+  <div
+    class="new_models_gallery__box__item"
+    @click.prevent="$store.dispatch('addToBagAction', [price, vendor])"
+  >
     <!-- можно конечно разбивать на еще компоненты, но сейчас наверное это излишне -->
-    <img v-bind:src="require(`../assets/section_new/${src}.jpg`)" v-bind:alt="alt" />
+    <img
+      v-bind:src="require(`../assets/section_new/${src}.jpg`)"
+      v-bind:alt="alt"
+    />
     <div class="new_models_gallery__box__item_desc">
       <div>
         <span v-if="sex === 'f'">Женские валенки</span>
@@ -15,12 +21,16 @@
 </template>
 
 <script>
+const uuidv4 = require('uuid/v4');
+// While component is mount, it will work, hovewer if refreshed I think uuid will generate new id
+
 export default {
   name: 'boot-el',
   data() {
     return {
       f: 'Женские Валенки',
-      m: 'Мужские Валенки'
+      m: 'Мужские Валенки',
+      vendor: uuidv4()
     };
   },
   props: {

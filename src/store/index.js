@@ -15,27 +15,34 @@ export default new Vuex.Store({
       let i = state.bag.items.length;
       let spelling;
 
-      switch (i) {
-        case 1:
-          spelling = 'товар';
-          break;
-        case i > 1 && i < 5:
-          // Можно сделать продвинутей на сотни и так далее, отрезая последние цифры
-          spelling = 'товарa';
-          break;
-        case i > 4:
-          spelling = 'товаров';
-          break;
-        case i === 0:
-          return false;
-        default:
-          return false;
+      if (i === 0) {
+        return false;
+      } else if (i === 1) {
+        spelling = 'товар';
+      } else if (i > 0 && i < 5) {
+        // Можно сделать продвинутей на сотни и так далее, отрезая последние цифры
+        spelling = 'товара';
+      } else if (i > 4) {
+        spelling = 'товаров';
       }
 
       return `${i} ${spelling}/${state.bag.totalPrice} руб`;
+    },
+    getTrue(state) {
+      return state.bag.totalPrice;
     }
   },
-  mutations: {},
-  actions: {},
+  mutations: {
+    addToBag(state, item) {
+      state.bag.items = [...state.bag.items, item];
+      state.bag.totalPrice += item.price;
+    }
+  },
+  actions: {
+    addToBagAction(context, data) {
+      console.log(data[0] + data[1], ' CENTEXT');
+      context.commit('addToBag', { name: 'valenok', price: 1225 });
+    }
+  },
   modules: {}
 });
