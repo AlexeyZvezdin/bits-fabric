@@ -7,19 +7,31 @@
       <div class="header_box__nav">
         <nav>
           <ul>
-            <li><a href="">Валенки</a></li>
-            <li><a href="">Галоши</a></li>
-            <li><a href="">Одежда</a></li>
-            <li><a href="">Аксессуары</a></li>
-            <li><a href="">О фабрике</a></li>
+            <li>
+              <a href>Валенки</a>
+            </li>
+            <li>
+              <a href>Галоши</a>
+            </li>
+            <li>
+              <a href>Одежда</a>
+            </li>
+            <li>
+              <a href>Аксессуары</a>
+            </li>
+            <li>
+              <a href>О фабрике</a>
+            </li>
           </ul>
         </nav>
       </div>
       <div class="header_box__shopping_bag">
         <div class="header_box__shopping_bag__box">
-          <img src="../assets/cart.png" alt="корзина покупок" /><span
-            >Корзина</span
-          >
+          <img src="../assets/cart.png" alt="корзина покупок" />
+          <span>
+            {{$store.getters.fullBag}}
+            Корзина
+          </span>
         </div>
       </div>
     </div>
