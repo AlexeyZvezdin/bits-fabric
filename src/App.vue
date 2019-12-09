@@ -1,9 +1,5 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Главная</router-link>|
-      <router-link to="/bag">Корзина</router-link>
-    </div>
     <Header />
 
     <router-view />
@@ -35,14 +31,26 @@
   src: url('./assets/Circe-Regular.ttf');
 }
 
+@media (max-width: 960px) {
+  #app {
+    max-width: 960px;
+    min-width: 768px;
+  }
+}
+
+@media (max-width: 768px) {
+  #app {
+    max-width: 768px;
+    min-width: 375px;
+  }
+}
+
 #app {
   font-family: 'Circe', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   width: 960px;
   margin: 0 auto;
-  border-right: 1px solid lightgray;
-  border-left: 1px solid lightgray;
   height: 2400px;
 }
 </style>
@@ -57,6 +65,5 @@ export default {
   }
 };
 </script>
-
 
 // Можно выделить все заговолки в секциях в отдельный компонент, и валенки

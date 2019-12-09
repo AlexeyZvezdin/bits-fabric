@@ -27,6 +27,13 @@ export default {
 </script>
 
 <style>
+@media (max-width: 768px) {
+  main {
+    max-width: 768px;
+    min-width: 375px;
+  }
+}
+
 main {
   width: 960px;
 }

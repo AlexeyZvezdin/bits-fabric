@@ -4,7 +4,13 @@
       <Boot price="3700" src="1" alt="Валенки" sex="f" name="Василёк Спорт" />
       <Boot price="1960" src="2" alt="Валенки" sex="f" name="Соловей" />
       <Boot price="2460" src="3" alt="Валенки" sex="m" name="Альфа" />
-      <Boot price="3700" src="4" alt="Валенки" sex="f" name="Василиса Янтарная" />
+      <Boot
+        price="3700"
+        src="4"
+        alt="Валенки"
+        sex="f"
+        name="Василиса Янтарная"
+      />
     </div>
   </div>
 </template>
@@ -27,5 +33,6 @@ export default {
 
 .new_models_gallery__box {
   display: flex;
+  flex-wrap: wrap;
 }
 </style>

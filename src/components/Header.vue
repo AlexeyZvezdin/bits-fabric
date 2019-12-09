@@ -26,11 +26,15 @@
         </nav>
       </div>
       <div class="header_box__shopping_bag">
-        <div class="header_box__shopping_bag__box">
-          <img src="../assets/cart.png" alt="корзина покупок" />
-          <span v-if="$store.getters.getTrue">{{$store.getters.fullBag}}</span>
-          <span v-else>Корзина</span>
-        </div>
+        <router-link to="/bag">
+          <div class="header_box__shopping_bag__box">
+            <img src="../assets/cart.png" alt="корзина покупок" />
+            <span v-if="$store.getters.getTrue">{{
+              $store.getters.fullBag
+            }}</span>
+            <span v-else>Корзина</span>
+          </div>
+        </router-link>
       </div>
     </div>
   </header>
@@ -42,8 +46,14 @@
 
 /* shopping bag ∨ */
 
+@media (max-width: 960px) {
+  .header_box__fabric_h1 {
+    display: none;
+  }
+}
+
 .header_box__shopping_bag {
-  margin-right: 10px;
+  margin-right: 30px;
   margin-top: 20px;
   display: flex;
   justify-content: center;

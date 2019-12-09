@@ -2,7 +2,13 @@
   <div class="content">
     <div class="content_boots">
       <Boot src="5" alt="Детские Валенки" sex="m" name="Модник" price="2341" />
-      <Boot src="7" alt="Женские Валенки" sex="f" name="Аляска Лось" price="4231" />
+      <Boot
+        src="7"
+        alt="Женские Валенки"
+        sex="f"
+        name="Аляска Лось"
+        price="4231"
+      />
     </div>
     <div class="content__showcase">
       <img src="../assets/woman.jpg" alt="Девушка в валенках" />
@@ -33,6 +39,7 @@ export default {
 .content {
   margin-top: 25px;
   display: flex;
+  flex-wrap: wrap;
 }
 
 .content__showcase {
