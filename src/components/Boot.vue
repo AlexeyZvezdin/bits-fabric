@@ -38,6 +38,7 @@ export default {
   max-width: 220px;
   margin-left: 10px;
   cursor: pointer;
+  margin-bottom: 15px;
 }
 
 .new_models_gallery__box__item:hover {

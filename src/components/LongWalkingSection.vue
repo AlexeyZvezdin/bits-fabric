@@ -1,30 +1,34 @@
 <template>
   <section class="long_walking">
-    <h1>Для долгих прогулок</h1>
-
-    <p>
-      В этих валенках можно гулять 5—6 часов подряд.
-      C массажной стелькой ноги не устанут. Резиновая подошва не скользит и не промерзает.
-    </p>
+    <SectionHeader :h1="h1" :par="par" />
+    <!-- section content -->
+    <LongWalkingContent />
   </section>
 </template>
 
 <script>
+import SectionHeader from './SectionHeader';
+import LongWalkingContent from './LongWalkingContent';
+
 export default {
-  name: 'walking-section'
+  name: 'walking-section',
+  components: {
+    SectionHeader,
+    LongWalkingContent
+  },
+  data() {
+    return {
+      h1: 'Для долгих прогулок',
+      par:
+        'В этих валенках можно гулять 5—6 часов подряд. C массажной стелькой ноги не устанут. Резиновая подошва не скользит и не промерзает.'
+    };
+  }
 };
 </script>
 
 <style>
 .long_walking {
   margin-top: 28px;
-}
-
-.long_walking h1 {
-  font-size: 34px;
-  padding-bottom: 10px;
-  border-bottom: 1px solid lightgray;
-  display: inline;
-  margin-left: 10px;
+  padding-left: 10px;
 }
 </style>
